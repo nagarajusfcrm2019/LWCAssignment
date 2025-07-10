@@ -8,8 +8,9 @@ This project allows a Customer Service Representative to view the latest shipmen
 5. To clear the displayed status and refresh, click the "REFRESH" button.
 
 
+1st Approach: Apex REST Service
+This method involves exposing Apex as a standard web service through a custom URL endpoint. By using the @RestResource annotation with urlMapping, we define a predictable, RESTful URL path—such as /services/apexrest/mockShipmentStatus. The service is designed to respond to standard HTTP methods like GET, making it ideal for external system integration where Salesforce behaves like a traditional API server.
 
-   We can implement this in 2 approaches:
-    1st Approach: APEX REST Service where exposing Apex as standard webservice with a specific URL endpoint and interacting it using standard HTTP methods like Get. 
-                 @RestResource with urlMapping allows defining a custom, predictable URL for the service(/service/apexrest/mockShipmentStatus), mimicking how external systems might interact with salesforce
-    2nd Approach: standard @AuraEnabled apex method. In this we are accessing URL with in the salesforce. so instead of APEX REST service still be a valid, i used standard Apex and LWC communication
+2nd Approach: Standard Apex Method with @AuraEnabled
+In this approach, we stay entirely within the Salesforce platform. Instead of using a RESTful service, we rely on the built-in communication between Apex and Lightning Web Components (LWC) using @AuraEnabled methods. This is suitable when there’s no need to expose the functionality externally, and everything is executed within the trusted Salesforce environment.
+
