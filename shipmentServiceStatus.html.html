@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <div class="container">
+            <div class="slds-m-around_small slds-text-title_bold slds-text-title_caps" data-id="trackingNumber">Tracking Number : {trackingNumber}</div>
+            <lightning-button class="slds-m-around_small slds-text-title_caps slds-text-title_bold" label="SHIPMENT STATUS" onclick={fetchShipmentStatus}></lightning-button>
+
+            <lightning-button class="slds-m-around_small slds-text-title_caps slds-text-title_bold" label="REFRESH" onclick={refreshShipmentStatus}></lightning-button>
+        </div>
+        <div class="status-section slds-m-around_small">Status: {shipmentStatus}</div>
+    </lightning-card>
+</template>
