@@ -14,3 +14,4 @@ This method involves exposing Apex as a standard web service through a custom UR
 2nd Approach: Standard Apex Method with @AuraEnabled
 In this approach, we stay entirely within the Salesforce platform. Instead of using a RESTful service, we rely on the built-in communication between Apex and Lightning Web Components (LWC) using @AuraEnabled methods. This is suitable when there’s no need to expose the functionality externally, and everything is executed within the trusted Salesforce environment.
 
+Note: I have developed this with both approaches.
