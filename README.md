@@ -6,6 +6,7 @@ This project allows a Customer Service Representative to view the latest shipmen
 3. Shipment status is fetched from an Apex controller based on the Tracking Number field.
 4. Click the "Shipment Status" button to fetch and display the current status of the shipment based on the tracking number.
 5. To clear the displayed status and refresh, click the "REFRESH" button.
+6. Created Remote site settings
 
 
 1st Approach: Apex REST Service
