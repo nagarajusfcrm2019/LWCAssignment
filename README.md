@@ -8,4 +8,4 @@ This project allows a Customer Service Representative to view the latest shipmen
    We can implement this in 2 approaches:
     1st Approach: APEX REST Service where exposing Apex as standard webservice with a specific URL endpoint and interacting it using standard HTTP methods like Get. 
                  @RestResource with urlMapping allows defining a custom, predictable URL for the service(/service/apexrest/mockShipmentStatus), mimicking how external systems might interact with salesforce
-    2nd Approach: standard @AuraEnabled apex method. In this we are accessing URL hard coded string with in the salesforce, instead of APEX REST service still be a valid, but overkill
+    2nd Approach: standard @AuraEnabled apex method. In this we are accessing URL with in the salesforce. so instead of APEX REST service still be a valid, i used standard Apex and LWC communication
