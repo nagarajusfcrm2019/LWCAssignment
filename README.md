@@ -11,8 +11,17 @@ This project allows a Customer Service Representative to view the latest shipmen
 
 1st Approach: Apex REST Service
 This method involves exposing Apex as a standard web service through a custom URL endpoint. By using the @RestResource annotation with urlMapping, we define a predictable, RESTful URL path—such as /services/apexrest/mockShipmentStatus. The service is designed to respond to standard HTTP methods like GET, making it ideal for external system integration where Salesforce behaves like a traditional API server.
+ Code Components : MockShippingStatusService - Apex Class
+                   mockShipmentStatus.html
+                   mockShipmentStatus.js
+                   mockShipmentStatus.js-meta
 
 2nd Approach: Standard Apex Method with @AuraEnabled
 In this approach, we stay entirely within the Salesforce platform. Instead of using a RESTful service, we rely on the built-in communication between Apex and Lightning Web Components (LWC) using @AuraEnabled methods. This is suitable when there’s no need to expose the functionality externally, and everything is executed within the trusted Salesforce environment.
+
+ Code Components : ShipmentStatusIntegration - Apex Class
+                   shipmentServiceStatus.html
+                   shipmentServiceStatus.js
+                   shipmentServiceStatus.js-meta
 
 Note: I have developed this with both approaches in my trailhead org.
