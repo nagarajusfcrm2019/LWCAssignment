@@ -12,11 +12,6 @@ export default class ShipmentStatus extends LightningElement {
 
     shipmentStatus = '';
 
-    handleTrackingNumberChange(event) {
-        this.trackingNumber = event.target.value;
-        console.log('TrackingNumber: ' + this.trackingNumber);
-    }
-
     refreshShipmentStatus(){
         this.shipmentStatus = ''; 
     }
