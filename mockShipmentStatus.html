@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Check Shipment Status">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Tracking Number" value={trackingNumber} onchange={handleInput}></lightning-input>
+            <lightning-button label="Check Status" onclick={checkStatus} class="slds-m-top_small"></lightning-button>
+
+            <template if:true={status}>
+                <p class="slds-m-top_medium"><strong>Status:</strong> {status}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
